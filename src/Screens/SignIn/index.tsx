@@ -12,16 +12,12 @@ import { ButtonIcon } from '../../Components/ButtonIcon'
 import IllustrationImg from '../../assets/illustration.png';
 
 export function SignIn() {
-    let title = 'Organize \n suas jogatinas \n facilmente';
+    let title = 'Conecte-se \n e organize suas \n jogatinas';
     let subtitle = 'Crie grupos para jogar seus games \n favoritos com seus amigos';
     let btnText = 'Entrar com Discord';
 
     return (
         <View style={styles.container}>
-            <StatusBar
-                barStyle='light-content'
-                backgroundColor='transparent'
-                translucent />
             <Image
                 source={IllustrationImg}
                 style={styles.image}
@@ -36,7 +32,6 @@ export function SignIn() {
                 <Text style={styles.subtitle}>
                     {subtitle}
                 </Text>
-
                 <ButtonIcon
                     btnText={btnText}
                     activeOpacity={0.6}
