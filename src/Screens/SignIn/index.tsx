@@ -6,15 +6,23 @@ import {
     StatusBar
 } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
+
 import { styles } from './styles'
 import { ButtonIcon } from '../../Components/ButtonIcon'
 
 import IllustrationImg from '../../assets/illustration.png';
 
 export function SignIn() {
+    const navigation = useNavigation();
+
     let title = 'Conecte-se \n e organize suas \n jogatinas';
     let subtitle = 'Crie grupos para jogar seus games \n favoritos com seus amigos';
     let btnText = 'Entrar com Discord';
+
+    function handleSignIn() {
+        navigation.navigate('Home' as never);
+    }
 
     return (
         <View style={styles.container}>
@@ -34,7 +42,7 @@ export function SignIn() {
                 </Text>
                 <ButtonIcon
                     btnText={btnText}
-                    activeOpacity={0.6}
+                    onPress={handleSignIn}
                 />
             </View>
         </View>
