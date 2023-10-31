@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 24,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: getStatusBarHeight() + 26,
+        marginTop: getStatusBarHeight() + 38,
         marginBottom: 42,
     },
     content: {
