@@ -1,11 +1,14 @@
 import React, { Fragment } from 'react';
 import { useFonts } from 'expo-font';
 import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
-import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhani';
+import {
+  Rajdhani_500Medium,
+  Rajdhani_700Bold,
+} from '@expo-google-fonts/rajdhani';
 import { StatusBar } from 'react-native';
 import AppLoading from 'expo-app-loading';
 
-import { Routes } from "./src/Routes";
+import { Routes } from './src/Routes';
 
 import { Background } from './src/Components/Background';
 
@@ -14,18 +17,19 @@ export default function App() {
     Inter_400Regular,
     Inter_500Medium,
     Rajdhani_500Medium,
-    Rajdhani_700Bold
-  })
+    Rajdhani_700Bold,
+  });
 
   if (!fontsLoaded) {
-    return <AppLoading />
+    return <AppLoading />;
   } else {
     return (
       <Background>
         <StatusBar
-          barStyle='light-content'
-          backgroundColor='transparent'
-          translucent />
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
         <Routes />
       </Background>
     );
