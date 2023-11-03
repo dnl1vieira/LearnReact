@@ -42,7 +42,8 @@ export function Guilds({ handleGuildSelect }: MyProps) {
           <Guild data={item} onPress={() => handleGuildSelect(item)} />
         )}
         showsVerticalScrollIndicator={false}
-        ItemSeparatorComponent={() => <ListSeparator />}
+        ItemSeparatorComponent={() => <ListSeparator isCentered />}
+        contentContainerStyle={{ paddingBottom: 68 }}
         style={styles.guilds}
       />
     </View>

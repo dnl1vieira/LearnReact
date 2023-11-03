@@ -17,11 +17,11 @@ export const styles = StyleSheet.create({
         fontFamily: theme.fonts.Rajdhani700Bold,
         color: theme.colors.heading,
         fontSize: 18,
-        marginBottom: 8,
+        marginBottom: 4,
     },
     type: {
         fontFamily: theme.fonts.Inter400Regular,
         color: theme.colors.highlight,
-        fontSize: 13,
+        fontSize: 13
     }
 });

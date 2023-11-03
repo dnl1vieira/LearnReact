@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
     banner: {
         width: '100%',
         height: 250,
-        marginBottom: 30
     },
     title: {
         fontFamily: theme.fonts.Rajdhani700Bold,
@@ -17,6 +16,7 @@ export const styles = StyleSheet.create({
         fontFamily: theme.fonts.Inter400Regular,
         fontSize: 13,
         color: theme.colors.heading,
+        lineHeight: 21,
     },
     bannerContent: {
         flex: 1,
