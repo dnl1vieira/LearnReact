@@ -19,6 +19,18 @@ export function Guilds({ handleGuildSelect }: MyProps) {
       icon: 'image.png',
       owner: true,
     },
+    {
+      id: '2',
+      name: 'New Icons',
+      icon: 'image.png',
+      owner: true,
+    },
+    {
+      id: '3',
+      name: 'Lendários',
+      icon: 'image.png',
+      owner: true,
+    },
   ];
 
   return (
