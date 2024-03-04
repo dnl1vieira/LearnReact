@@ -1,24 +1,27 @@
 import React from 'react';
-import { View, Text, Image, StatusBar } from 'react-native';
-
-import { useNavigation } from '@react-navigation/native';
+import { View, Text, Image } from 'react-native';
 
 import { styles } from './styles';
 import { ButtonIcon } from '../../Components/ButtonIcon';
 import { Background } from '../../Components/Background';
 
 import IllustrationImg from '../../assets/illustration.png';
+import { useAuth } from '../../hooks/auth';
 
 export function SignIn() {
-  const navigation = useNavigation();
+  const { signIn } = useAuth();
 
   let title = 'Conecte-se \n e organize suas \n jogatinas';
   let subtitle =
     'Crie grupos para jogar seus games \n favoritos com seus amigos';
   let btnText = 'Entrar com Discord';
 
-  function handleSignIn() {
-    navigation.navigate('Home' as never);
+  async function handleSignIn() {
+    try {
+      await signIn();
+    } catch (error) {
+      alert(error);
+    }
   }
 
   return (
